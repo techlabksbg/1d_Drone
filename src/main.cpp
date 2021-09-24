@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
-// #include <Servo.h>
+#include <Servo.h>
 
 const int MPU_addr = 0x68;  // I2C address of the MPU-6050
 const int avg_number = 220; //100; //oben = 0; unten ca. 300
@@ -9,7 +9,7 @@ int16_t index = 0, setPoint=230, setPointBegin = 0;
 float sum = 0;
 float AcX, error;
 float turn, Kp = 0.007, Ki = 0.00001, Kd = 0.0001, derivative = 0, lastError = 0, integral;
-Arduino.Servo drone;
+Servo drone;
 void setup()
 {
     Wire.begin();
