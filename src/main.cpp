@@ -8,7 +8,7 @@ int16_t average[avg_number];
 int16_t index = 0, setPoint = 0, setPointBegin = 0;
 float sum = 0;
 float AcY, error; // AcY maximum (top) = 2500, minimum (bottom) = -3300, 0 = best
-float turn, Kp = 0.001, Ki = 0, Kd = 0, derivative = 0, lastError = 0, integral;
+float turn, Kp = 0.0005, Ki = 0.000003, Kd = 0.0008, derivative = 0, lastError = 0, integral;
 Servo drone; // drone.write() //50 = minimum, 65 = maximum
 void setup()
 {
